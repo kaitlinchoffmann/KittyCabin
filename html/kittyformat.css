@@ -1,0 +1,12 @@
+body {
+  margin-right: 200px;
+  margin-left: 200px;
+  font-size: 20px;
+  font-family: 'Merienda';
+  background-color: white;  
+}
+#one {
+  border-style: dotted;
+  border-width: 2px;
+  background-color: rgb(255, 197, 151);
+}     

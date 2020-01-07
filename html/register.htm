@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Registration Page</title>
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+        <link rel="stylesheet" href="kittyformat.css"/>
+</head>
+<body>
+  <script>
+  function hideInd(x) {
+    if(x.checked) {
+      document.getElementById("I").style.display = "none";
+      document.getElementById("B").style.display = "initial";
+      document.getElementById("S").style.display = "none";  
+    }
+  }
+
+  function hideBus(x) {
+    if(x.checked) {
+      document.getElementById("B").style.display = "none";
+      document.getElementById("I").style.display = "initial";
+      document.getElementById("S").style.display = "none";
+    }
+  }
+  function hideStaf(x) {
+    if(x.checked) {
+      document.getElementById("B").style.display = "none";
+      document.getElementById("S").style.display = "initial";
+      document.getElementById("I").style.display = "none";
+    }
+  }
+</script>
+
+<input type="radio" onload="hideInd(this)" onclick="hideInd(this)" name="custType" value="Business" checked> Business 
+<input type="radio" onclick="hideBus(this)" name="custType" value="Individual"> Individual
+<input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff
+<h2> Registration </h2>
+  <div id = "B">
+    <form method="post" action="cgi-bin/register.cgi">
+    <div id ="one"> 
+                Full Name:<br>
+                <input type="hidden" name="custType" value="Business">
+                <input type="text" name="custName"><br>
+                Business Email:<br>
+                <input type="text" name="custEmail"><br>
+                Password:<br>
+                <input type="text" name="custPassword"><br>
+                Confirm Password:<br>
+                <input type="text" name="confirmPassword"><br>
+                Shipping Address:<br>
+                <input type="text" name="address"><br>
+                Bank Account Number:<br>
+                <input type="text" name="debitCardNum"><br>
+                <p><input type="submit" value="Submit"></p>
+</div>
+</form></div>
+
+<div id = "I"> 
+  <form method="post" action="cgi-bin/register.cgi">
+  <div id ="one"> 
+                Full Name:<br>
+                <input type="hidden" name="custType" value="Individual">
+                <input type="text" name="custName"><br>
+                Email:<br>
+                <input type="text" name="custEmail"><br>
+                Password:<br>
+                <input type="text" name="custPassword"><br>
+                Confirm Password:<br>
+                <input type="text" name="confirmPassword"><br>
+                Address:<br>
+                <input type="text" name="address">
+                <p><input type="submit" value="Submit"></p>
+  </div>
+  </form></div>
+
+  <div id = "S"> 
+  <form method="post" action="cgi-bin/register.cgi">
+  <div id ="one"> 
+                Full Name:<br>
+                <input type="hidden" name="custType" value="Staff">
+                <input type="text" name="custName"><br>
+                Email:<br>
+                <input type="text" name="custEmail"><br>
+                Password:<br>
+                <input type="text" name="custPassword"><br>
+                Confirm Password:<br>
+                <input type="text" name="confirmPassword"><br>
+                <p><input type="submit" value="Submit"></p>
+  </div>
+  </form></div>
+
+</body>
+</html>

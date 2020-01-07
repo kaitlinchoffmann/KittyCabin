@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Merienda';
+   background-color: rgb(255, 197, 151);
+}
+
+p {
+  margin: 30px;
+}
+
+h3 {
+  margin: 30px;
+}
+
+#header {
+        text-align: center;
+        padding-bottom: 20px;
+}
+
+#spacing {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(240, 240, 240);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border: 1px solid rgb(220, 220, 220);
+  width: 100%;
+}
+
+#main {
+  background-color: white;      
+  color: #333;
+  margin: 20px;
+}
+
+li {
+  float: left;
+}
+li:last-child {
+        float: right;
+}
+
+li a {
+float: left;
+}
+li:last-child {
+        float: right;
+}
+
+li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.active {
+  background-color: rgb(113, 169, 203, 0.5);
+}

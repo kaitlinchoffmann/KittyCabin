@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Merienda';
+   background-color: rgb(255, 197, 151);
+}
+
+#pics {
+  padding: 50px;
+}
+
+#quotes {
+
+}
+
+#header {
+        text-align: center;
+        padding-top: 50px;
+}
+
+#spacing {
+  padding: 10px;
+}
+
+#main {
+  background-color: white;
+  color: #333;
+   margin-top: 0px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
