@@ -1,0 +1,6 @@
+0           
+3191234567  
+
+//------ MAYOR REPLY FORMAT ------ 
+// status 0=ok, 1=error1, 2=error2, ...
+// Mayor confirmation/order #

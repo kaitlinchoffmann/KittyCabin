@@ -1,0 +1,6 @@
+0           
+4191234567  
+
+//------ BANK REPLY FORMAT ------ 
+// status 0=ok, 1=error1, 2=error2, ...
+// Bank confirmation/order #

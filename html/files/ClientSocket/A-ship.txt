@@ -1,0 +1,6 @@
+0           
+2191234567  
+
+//------ SHIP REPLY FORMAT ------ 
+// status 0=ok, 1=error1, 2=error2, ...
+// Ship confirmation/order #
