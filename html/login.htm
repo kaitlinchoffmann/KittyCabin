@@ -2,22 +2,46 @@
 <html>
 <head>
         <title>Login Page</title>
-        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-        <link rel="stylesheet" href="kittyformat.css" />              
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>      
+        <link rel="stylesheet" href="topKittyFormat2.css" />
 </head>
 <body>
+
+<!--
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.htm">About</a></li>
+    <li><a class="active" href="login.htm">Login</a></li>
+    <li><a href="cgi-bin/logout.cgi">Logout</a></li>
+    <li><a href="register.htm">Register</a></li>
+    <li><a href="cgi-bin/catalog.cgi">Shop</a></li>
+    <li><a href="cgi-bin/cart.cgi">Cart</a></li-last>
+  </ul>
+</nav>
+-->
+<CENTER>
+  <h1>The Kitty Cabin</h1>
+</CENTER>
+
+<div id='body2'>
 <CENTER>
 <h2>Login</h2>  
-<form method = "post" action="cgi-bin/login.cgi">
+<form method = "post" action="cgi-bin/login.cgi"> <!-- cgi-bin/index-top-menu2.cgi  cgi-bin/login.cgi -->
 <div id ="one">		 
         <p>Email: 
         <input type="text" name="custEmail"><br>
         Password:
         <input type="text" name="password"><br>
-        <input type="submit" name="Sign In">
+        <input type="submit" value="Sign In" name="Sign In">
         </p> 
 </div>                      
-</form> 
+</form>
+<p>Not a Kitty Cabin Member? Register Now! </p> 
+<form method = "post" action="register.htm">
+    <p><input type="submit" value="Register" name="register"></p>
+</form>
 </CENTER>
+</div>
 </body>
 </html>
