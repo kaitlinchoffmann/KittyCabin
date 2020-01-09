@@ -35,11 +35,11 @@ if 'HTTP_COOKIE' in os.environ:
         </div>
 
         <ul>
-          <li><a class="active" href="../index.html" onClick="window.location.href='index-top-menu2.cgi'">Home</a></li>
-          <li><a href="../about.htm" onClick="window.location.href='index-top-menu2.cgi'">About</a></li>
-          <li><a href="logout.cgi" target="BOT">Logout</a></li>
-          <li><a href="catalog.cgi" target="BOT" onClick="window.location.href='index-top-menu2.cgi'">Shop</a></li>
-          <li><a href="cart.cgi" target="BOT" onClick="window.location.href='index-top-menu2.cgi'">Cart</a></li-last>
+          <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="../about.htm">About</a></li>
+          <li><a href="logout.cgi">Logout</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
         </ul>
         
         <div id = "main">
@@ -70,12 +70,12 @@ if 'HTTP_COOKIE' in os.environ:
         </div>
 
         <ul>
-          <li><a class="active" href="../index.html" onClick="window.location.href='index-top-menu2.cgi'">Home</a></li>
+          <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
           <li><a href="../about.htm">About</a></li>
           <li><a href="../login.htm">Login</a></li>
           <li><a href="../register.htm">Register</a></li>
-          <li><a href="catalog.cgi" onClick="window.location.href='index-top-menu2.cgi'">Shop</a></li>
-          <li><a href="cart.cgi" onClick="window.location.href='index-top-menu2.cgi'">Cart</a></li-last>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
         </ul>    
         
         <div id = "main">
@@ -106,12 +106,12 @@ else:
     </div>
 
     <ul>
-      <li><a href="../index.html" onClick="window.location.href='index-top-menu2.cgi'">Home</a></li>
+      <li><a href="index-top-menu2.cgi">Home</a></li>
       <li><a href="../about.htm">About</a></li>
-      <li><a href="../login.htm" target="BOT">Login</a></li>
-      <li><a href="../register.htm" target="BOT">Register</a></li>
-      <li><a href="catalog.cgi" target="BOT" onClick="window.location.href='index-top-menu2.cgi'">Shop</a></li>
-      <li><a href="cart.cgi" target="BOT" onClick="window.location.href='index-top-menu2.cgi'">Cart</a></li-last>
+      <li><a href="../login.htm">Login</a></li>
+      <li><a href="../register.htm">Register</a></li>
+      <li><a href="catalog.cgi">Shop</a></li>
+      <li><a href="cart.cgi">Cart</a></li-last>
     </ul>
     
     <div id = "main">
