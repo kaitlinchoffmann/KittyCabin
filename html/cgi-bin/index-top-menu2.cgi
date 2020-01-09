@@ -17,6 +17,7 @@ print """
         <title>The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
         <link rel="stylesheet" href="../topKittyFormat.css" />
+        
 </head>
 <body>
 """
@@ -25,7 +26,7 @@ if 'HTTP_COOKIE' in os.environ:
     cookie_string=os.environ.get('HTTP_COOKIE')
     c=Cookie.SimpleCookie()
     c.load(cookie_string)
-
+    
     try:
         cData=c["custId"].value
         print """
