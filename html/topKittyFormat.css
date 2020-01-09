@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-size: 20px;
   font-family: 'Merienda';
-   background-color: rgb(255, 197, 151);
+  background-color: rgb(255, 197, 151);
 }
 
 p {
@@ -36,9 +36,12 @@ ul {
 }
 
 #main {
+  padding-top: 50px;
   background-color: white;      
   color: #333;
-  margin: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 li {
@@ -68,5 +71,5 @@ li a:hover {
 }
 
 .active {
-  background-color: rgb(113, 169, 203, 0.5);
+  background-color: rgb(225, 225, 225);
 }
