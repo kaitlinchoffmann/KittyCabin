@@ -5,7 +5,7 @@ E-Business Project
 
 1.1 URL to The Kitty Cabin
 
-https://cs.newpaltz.edu/e/b-f19-06/
+https://cs.newpaltz.edu/e/b-f19-06/cgi-bin/
 
 1.2 What is The Kitty Cabin?
 
