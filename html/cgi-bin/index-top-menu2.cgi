@@ -37,31 +37,11 @@ if 'HTTP_COOKIE' in os.environ:
 
         <ul>
           <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
-          <li><a href="../about.htm">About</a></li>
+          <li><a href="about.cgi">About</a></li>
           <li><a href="logout.cgi">Logout</a></li>
           <li><a href="catalog.cgi">Shop</a></li>
           <li><a href="cart.cgi">Cart</a></li-last>
         </ul>
-        
-        <div id = "main">
-
-          <h3 id = "header">You'll Never Want to Own Another Piece of Clothing</h3>
-
-        <div id = "pics"><center><img src="../HarryShirt.jpeg" width="300" height="400"> <p><id = "quotes"> 
-          "I saw him and knew I needed him in my life...on a shirt." <br>- Satisfied Customer</id></p></center></div>
-
-        <div id = "pics"><center><img src="../jerrysock.jpeg" width="300" height="400"><p><id = "quotes">
-          "Cutest socks ever. I stared at these socks for 2 weeks straight. I don't know how I lived without these." <br>- Very Satisfied Customer </id>
-        </center></div>
-
-        <div id = "pics"><center><img src="../earltank.jpeg" width="300" height="400"><p><id = "quotes">
-          "This is the only shirt I own now. I bought 20 of the tank with Earl on it. I threw everything else out. My life is complete." <br>
-          - Extremely Satisfied Customer (maybe stay away from them)</id></p></center></div>
-
-        <center><strong>Be as satisfied as these customers. Start Shopping Now!</strong></center>
-        <p id = "spacing"> </p>
-       </div>
-
         """
     except KeyError:
         print """
@@ -72,31 +52,12 @@ if 'HTTP_COOKIE' in os.environ:
 
         <ul>
           <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
-          <li><a href="../about.htm">About</a></li>
+          <li><a href="about.cgi">About</a></li>
           <li><a href="../login.htm">Login</a></li>
           <li><a href="../register.htm">Register</a></li>
           <li><a href="catalog.cgi">Shop</a></li>
           <li><a href="cart.cgi">Cart</a></li-last>
-        </ul>    
-        
-        <div id = "main">
-
-          <h3 id = "header">You'll Never Want to Own Another Piece of Clothing</h3>
-
-        <div id = "pics"><center><img src="../HarryShirt.jpeg" width="300" height="400"> <p><id = "quotes"> 
-          "I saw him and knew I needed him in my life...on a shirt." <br>- Satisfied Customer</id></p></center></div>
-
-        <div id = "pics"><center><img src="../jerrysock.jpeg" width="300" height="400"><p><id = "quotes">
-          "Cutest socks ever. I stared at these socks for 2 weeks straight. I don't know how I lived without these." <br>- Very Satisfied Customer </id>
-        </center></div>
-
-        <div id = "pics"><center><img src="../earltank.jpeg" width="300" height="400"><p><id = "quotes">
-          "This is the only shirt I own now. I bought 20 of the tank with Earl on it. I threw everything else out. My life is complete." <br>
-          - Extremely Satisfied Customer (maybe stay away from them)</id></p></center></div>
-
-        <center><strong>Be as satisfied as these customers. Start Shopping Now!</strong></center>
-        <p id = "spacing"> </p>
-       </div>
+        </ul>   
         """    
        
 else: 
@@ -108,33 +69,32 @@ else:
 
     <ul>
       <li><a href="index-top-menu2.cgi">Home</a></li>
-      <li><a href="../about.htm">About</a></li>
+      <li><a href="about.cgi">About</a></li>
       <li><a href="../login.htm">Login</a></li>
       <li><a href="../register.htm">Register</a></li>
       <li><a href="catalog.cgi">Shop</a></li>
       <li><a href="cart.cgi">Cart</a></li-last>
     </ul>
-    
-    <div id = "main">
+    """
+print """
+<div id = "main">
 
-          <h3 id = "header">You'll Never Want to Own Another Piece of Clothing</h3>
+    <h3 id = "header">You'll Never Want to Own Another Piece of Clothing</h3>
 
         <div id = "pics"><center><img src="../HarryShirt.jpeg" width="300" height="400"> <p><id = "quotes"> 
-          "I saw him and knew I needed him in my life...on a shirt." <br>- Satisfied Customer</id></p></center></div>
+        "I saw him and knew I needed him in my life...on a shirt." <br>- Satisfied Customer</id></p></center></div>
 
         <div id = "pics"><center><img src="../jerrysock.jpeg" width="300" height="400"><p><id = "quotes">
-          "Cutest socks ever. I stared at these socks for 2 weeks straight. I don't know how I lived without these." <br>- Very Satisfied Customer </id>
+        "Cutest socks ever. I stared at these socks for 2 weeks straight. I don't know how I lived without these." <br>- Very Satisfied Customer </id>
         </center></div>
 
         <div id = "pics"><center><img src="../earltank.jpeg" width="300" height="400"><p><id = "quotes">
-          "This is the only shirt I own now. I bought 20 of the tank with Earl on it. I threw everything else out. My life is complete." <br>
-          - Extremely Satisfied Customer (maybe stay away from them)</id></p></center></div>
+        "This is the only shirt I own now. I bought 20 of the tank with Earl on it. I threw everything else out. My life is complete." <br>
+        - Extremely Satisfied Customer (maybe stay away from them)</id></p></center></div>
 
         <center><strong>Be as satisfied as these customers. Start Shopping Now!</strong></center>
-        <p id = "spacing"> </p>
-    </div>
-    """
-print """
+            <p id = "spacing"> </p>
+</div>
 </body>
 </html>
 
