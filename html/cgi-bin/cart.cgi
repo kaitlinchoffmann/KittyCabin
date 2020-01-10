@@ -11,39 +11,76 @@ print "Content-type:text/html\n\n"
 print """
 <html>
 <head>
-    <link rel="stylesheet" href="../kittyformat.css" />
-</head>	
+
+        <title>Cart</title>
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+        <link rel="stylesheet" href="../topKittyFormat2.css" />
+</head>
 <body>
 """
+
 if 'HTTP_COOKIE' in os.environ:
     cookie_string=os.environ.get('HTTP_COOKIE')
     c=Cookie.SimpleCookie()
     c.load(cookie_string)
-
+    
     try:
         cData=c["custId"].value
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a  href="about.cgi">About</a></li>
+          <li><a href="logout.cgi">Logout</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a class="active" href="cart.cgi">Cart</a></li-last>
+        </ul>
+        </nav>
+       
+        """
     except KeyError:
-    	#cData=12345
-        print "<h2 id = 'one'><center>You're not logged in! Log in or Register now!</center><h2>"
-        print "<form method='post' action='../login.htm'>"
-        print "<center><input type='submit' value='Login'>"
-        print "</form>"
-        print "<form method='post' action='../register.htm'>"
-        print"<input type='submit' value='Register'>"
-        print "</form></center>"
-else:
-    print "<h2 id = 'one'><center>You're not logged in! Log in or Register now!</center><h2>"
-    print "<form method='post' action='../login.htm'>"
-    print "<center><input type='submit' value='Login'>"
-    print "</form>"
-    print "<form method='post' action='../register.htm'>"
-    print"<input type='submit' value='Register'>"
-    print "</form></center>"        
-print """
-</body>
-</html>
-
-"""
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="../login.htm">Login</a></li>
+          <li><a href="register2.cgi">Register</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a class="active" href="cart.cgi">Cart</a></li-last>
+        </ul>    
+        </nav>
+        
+        <h2 id = 'one'><center>You're not logged in! Log in or Register now!</center><h2>
+        <form method='post' action='../login.htm'>
+        <center><input type='submit' value='Login'>
+        </form>
+        <form method='post' action='../register.htm'>
+        <input type='submit' value='Register'>
+        </form></center>
+        """    
+       
+else: 
+    print """
+    <nav>
+    <ul>
+      <li><a href="index-top-menu2.cgi">Home</a></li>
+      <li><a href="about.cgi">About</a></li>
+      <li><a href="../login.htm">Login</a></li>
+      <li><a href="register2.cgi">Register</a></li>
+      <li><a href="catalog.cgi">Shop</a></li>
+      <li><a class="active" href="cart.cgi">Cart</a></li-last>
+    </ul>
+    </nav>
+    
+    <h2 id = 'one'><center>You're not logged in! Log in or Register now!</center><h2>
+    <form method='post' action='../login.htm'>
+    <center><input type='submit' value='Login'>
+    </form>
+    <form method='post' action='../register.htm'>
+    <input type='submit' value='Register'>
+    </form></center>
+    """
 
 sql = "SELECT * FROM cart WHERE customer_id = '%s' AND quantity > 0"%(cData)
 
@@ -59,14 +96,9 @@ except:
         print "Error: unable to fetch data"
 
 if (len(itemId) == 0):
-    print "<html>"
-    print "<head>"
-    print "<title>Cart Page</title>"
-    print "<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>"
-    print "<link rel='stylesheet' href='../kittyformat.css' />"
-    print "<head>"
-    print "<body>"
+    print "<div id='viewLay'>"
     print "<h1 id = 'one'><center>Your cart is empty! What are you waiting for? Go shopping!</center></h1>"
+    print "</div>"
     print "</body>"
     print "</html>"
 
@@ -85,15 +117,9 @@ while (counter < x):
     try:
         myCursor.execute(sql2)
         output = myCursor.fetchall()
-        print "<html>"
-        print "<head>"
-        print "<title>Cart Page</title>"
-        print "<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>"
-        print "<link rel='stylesheet' href='../kittyformat.css' />"
-        print "<head>"
-        print "<body>"
         if (counter == 1):
             print "<h1 id = 'one'><center> Cart Page</center></h1>"
+            print "<div id='viewLay'>"
         for row in output:
             print "<form method = 'post' action='removeItem.cgi'>"
             print "<input type='hidden' name = 'itemId' value='%s'>"%(row[0])
@@ -105,8 +131,6 @@ while (counter < x):
             print "<input type='number' name='quantity' min='1' max='%s'  value='1'>"%(quantity)
             print "<input type='submit' name='removeI' value='Remove Item'>"
             print "</form><br><br>"
-        print "</body>"
-        print "</html>"
     except:
         print "Error: unable to fetch dataa"
 db.close()
@@ -117,4 +141,7 @@ if (len(itemId) != 0):
 else:
     print "<form method = 'post' action='catalog.cgi'>"
     print "<p><center><input type='submit' name='shop' value='Shop'></center></p>"
-print "</form>"    
+print "</form>"
+print "</div>"    
+print "</body>"
+print "</html>"

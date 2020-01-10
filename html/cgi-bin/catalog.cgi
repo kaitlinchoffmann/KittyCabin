@@ -45,7 +45,7 @@ if 'HTTP_COOKIE' in os.environ:
           <li><a href="index-top-menu2.cgi">Home</a></li>
           <li><a href="about.cgi">About</a></li>
           <li><a href="../login.htm">Login</a></li>
-          <li><a href="../register.htm">Register</a></li>
+          <li><a href="register2.cgi">Register</a></li>
           <li><a class="active" href="catalog.cgi">Shop</a></li>
           <li><a href="cart.cgi">Cart</a></li-last>
         </ul>    
@@ -59,7 +59,7 @@ else:
       <li><a href="index-top-menu2.cgi">Home</a></li>
       <li><a href="about.cgi">About</a></li>
       <li><a href="../login.htm">Login</a></li>
-      <li><a href="../register.htm">Register</a></li>
+      <li><a href="register2.cgi">Register</a></li>
       <li><a class="active" href="catalog.cgi">Shop</a></li>
       <li><a href="cart.cgi">Cart</a></li-last>
     </ul>

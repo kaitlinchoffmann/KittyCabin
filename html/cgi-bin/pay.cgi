@@ -19,13 +19,14 @@ print "Content-type:text/html\n\n"
 print """
 <html>
 <head>
-    <link rel="stylesheet" href="../confirmKittyFormat.css" />
-</head>
-<body>	
-<h2 id = "one"><Center> Confirmation Page <center></h2>
-<body>
 
+        <title>The Kitty Cabin</title>
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+        <link rel="stylesheet" href="../topKittyFormat2.css" />
+</head>
+<body>
 """
+
 if 'HTTP_COOKIE' in os.environ:
     cookie_string=os.environ.get('HTTP_COOKIE')
     c=Cookie.SimpleCookie()
@@ -33,13 +34,47 @@ if 'HTTP_COOKIE' in os.environ:
 
     try:
         cData=c["custId"].value
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="logout.cgi">Logout</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>
+        </nav>
+       
+        """
     except KeyError:
-        print "No cookie :("
-print """
-</body>
-</html>
-
-"""
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="../login.htm">Login</a></li>
+          <li><a href="register2.cgi">Register</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>    
+        </nav>
+        """    
+       
+else: 
+    print """
+    <nav>
+    <ul>
+      <li><a href="index-top-menu2.cgi">Home</a></li>
+      <li><a href="about.cgi">About</a></li>
+      <li><a href="../login.htm">Login</a></li>
+      <li><a href="register2.cgi">Register</a></li>
+      <li><a href="catalog.cgi">Shop</a></li>
+      <li><a href="cart.cgi">Cart</a></li-last>
+    </ul>
+    </nav>
+    """
+print "<div id=viewLay>"
+print "<h2 id='one'><center>Confirmation Page</center></h2>"
 
 sql = "SELECT * FROM customer_t WHERE customer_id = '%s'"%(cData)
 
@@ -333,4 +368,7 @@ else:
     except:
         print "Error updating Order Table with Confirmation Number"
         db.rollback()    
+print "</div>"
+print "</body>"
+print "</html>"
 db.close()

@@ -14,8 +14,15 @@ db,myCursor = dbConnectCursor()
 print "Content-type:text/html\n\n"
 print """
 <html>
+<head>
+
+        <title>The Kitty Cabin</title>
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+        <link rel="stylesheet" href="../topKittyFormat2.css" />
+</head>
 <body>
 """
+
 if 'HTTP_COOKIE' in os.environ:
     cookie_string=os.environ.get('HTTP_COOKIE')
     c=Cookie.SimpleCookie()
@@ -23,30 +30,54 @@ if 'HTTP_COOKIE' in os.environ:
 
     try:
         cData=c["custId"].value
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="logout.cgi">Logout</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>
+        </nav>
+       
+        """
     except KeyError:
-        print "No cookie :("
-print """
-</body>
-</html>
-
-"""
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="../login.htm">Login</a></li>
+          <li><a href="register2.cgi">Register</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>    
+        </nav>
+        """    
+       
+else: 
+    print """
+    <nav>
+    <ul>
+      <li><a href="index-top-menu2.cgi">Home</a></li>
+      <li><a href="about.cgi">About</a></li>
+      <li><a href="../login.htm">Login</a></li>
+      <li><a href="register2.cgi">Register</a></li>
+      <li><a href="catalog.cgi">Shop</a></li>
+      <li><a href="cart.cgi">Cart</a></li-last>
+    </ul>
+    </nav>
+    """
 
 sql3 = "SELECT * FROM customer_t WHERE customer_id = '%s'"%(cData)
 
 sql = "SELECT * FROM cart WHERE customer_id = '%s' AND quantity > 0"%(cData)     
 
-print "<html>"
-print "<head>"
-print "<title> Checkout</title>"
-print "<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>"
-print "<link rel='stylesheet' href='../kittyformat.css'/>"
-print "<head>"
-print "<body>"
-print "<h1 id = 'one'><center>Checkout</center></h1>"
-
 print """
-<html>
-<body>
+<h1 id = 'one'><center>Checkout</center></h1>
+
+<div id= "viewLay">
 <h2>1 Shipping Information</h2>
 """
 print "<form method = 'post' action='confirmCheck.cgi'>"            
@@ -62,10 +93,6 @@ try:
         print "<input type='radio' name='shipMethod' value='2'> 2 Express</p>"
 except:
     print("Error: Can't fetch data!")
-    print """
-</body>
-</html>
-"""
 
 print """
 <html>
@@ -131,5 +158,8 @@ while (counter < x):
 
 print "<center><input type='submit' name='reviewOrder' value='Review Order'></center>"
 print "</form>"
+print "</div>"
+print "</body>"
+print "</html>"
 
 db.close()

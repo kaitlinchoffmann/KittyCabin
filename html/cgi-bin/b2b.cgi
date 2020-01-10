@@ -20,8 +20,15 @@ db,myCursor = dbConnectCursor()
 print "Content-type:text/html\n\n"
 print """
 <html>
+<head>
+
+        <title>B2B Confimation</title>
+        <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+        <link rel="stylesheet" href="../topKittyFormat2.css" />
+</head>
 <body>
 """
+
 if 'HTTP_COOKIE' in os.environ:
     cookie_string=os.environ.get('HTTP_COOKIE')
     c=Cookie.SimpleCookie()
@@ -29,13 +36,47 @@ if 'HTTP_COOKIE' in os.environ:
 
     try:
         cData=c["custId"].value
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="logout.cgi">Logout</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>
+        </nav>
+       
+        """
     except KeyError:
-        print "No cookie :("
-print """
-</body>
-</html>
-
-"""
+        print """
+        <nav>
+        <ul>
+          <li><a href="index-top-menu2.cgi">Home</a></li>
+          <li><a href="about.cgi">About</a></li>
+          <li><a href="../login.htm">Login</a></li>
+          <li><a href="register2.cgi">Register</a></li>
+          <li><a href="catalog.cgi">Shop</a></li>
+          <li><a href="cart.cgi">Cart</a></li-last>
+        </ul>    
+        </nav>
+        """    
+       
+else: 
+    print """
+    <nav>
+    <ul>
+      <li><a href="index-top-menu2.cgi">Home</a></li>
+      <li><a href="about.cgi">About</a></li>
+      <li><a href="../login.htm">Login</a></li>
+      <li><a href="register2.cgi">Register</a></li>
+      <li><a href="catalog.cgi">Shop</a></li>
+      <li><a href="cart.cgi">Cart</a></li-last>
+    </ul>
+    </nav>
+    """
+print "<div id=viewLay>"
+print "<h2 id='one'><center>B2B Confirmation Page</center></h2>"
          
 b2bInfo = custId + " " + custPass + " " + itemID + " " + quan
 b2bFile = bankFile = open("/var/www/ebusiness/b-f19-06/html/files/ClientSocket/Qc.dat", "w")
@@ -63,7 +104,7 @@ else:
 
 print(transB2B)
 if transB2B != True:
-	print "Issue with B2B Transaction. Please Try Again."
+	print "<h2 id='one'><center>Issue with B2B Transaction. Please Try Again.</center></h2>"
 else:
-	print "Transaction Successful!"
+	print "<h2 id='one'><center>Transaction Successful!</center></h2>"
 db.close()
