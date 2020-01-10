@@ -23,16 +23,37 @@ print "Content-type:text/html\n\n"
 print """
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
     <link rel="stylesheet" href="../kittyformat.css" />
+    <link rel="stylesheet" href="../topKittyFormat2.css" />
 </head>        
 <body>
 <h2 id = 'one'><center>Thanks for Stopping by! Log Back in or Register with a New Account:</center><h2>
-        <form method='post' action='../login.htm'>
-        <center><input type='submit' value='Login'>
-        </form>
-        <form method='post' action='../register.htm'>
-        <input type='submit' value='Register'>
-        </form></center>
+
+<CENTER>
+  <h1>The Kitty Cabin</h1>
+</CENTER>
+
+<div id='body2'>
+<CENTER>
+<h2>Login</h2>  
+<form method = "post" action="login.cgi"> <!-- cgi-bin/index-top-menu2.cgi  cgi-bin/login.cgi -->
+<div id ="one">          
+        <p>Email: 
+        <input type="text" name="custEmail"><br>
+        Password:
+        <input type="text" name="password"><br>
+        <input type="submit" value="Sign In" name="Sign In">
+        </p> 
+</div>                      
+</form>
+<p>Register a New Account! </p> 
+<form method = "post" action="../register.htm">
+    <p><input type="submit" value="Register" name="register"></p>
+</form>
+</CENTER>
+</div>
+
 </body>
 </html>
 
