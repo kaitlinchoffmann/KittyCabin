@@ -16,8 +16,8 @@ print """
 
         <title>The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-        <link rel="stylesheet" href="../topKittyFormat.css" />
-        
+        <link rel="stylesheet" href="../topKittyFormat2.css" />
+        <link rel="stylesheet" href="../topKittyFormat.css" />        
 </head>
 <body>
 """
@@ -29,20 +29,31 @@ if 'HTTP_COOKIE' in os.environ:
     
     try:
         cData=c["custId"].value
+        sql = "SELECT customer_name from customer_t WHERE customer_id = '%s'"%(cData)
+        try:
+            myCursor.execute(sql)
+            output = myCursor.fetchone()
+            for row in output:
+                custName = row  
+        except:
+            print "Error: unable to fetch data."
+
         print """
         <div id = "header",class="header">
         <h1>The Kitty Cabin</h1>
         <br>Clothes for the Ultimate Cat Lover
         </div>
-
+        
+        <nav>
         <ul>
           <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
           <li><a href="about.cgi">About</a></li>
           <li><a href="logout.cgi">Logout</a></li>
           <li><a href="catalog.cgi">Shop</a></li>
-          <li><a href="cart.cgi">Cart</a></li-last>
-        </ul>
-        """
+          <li>Hi, %s! <a href="cart.cgi">Cart</a></li-last>"""%(custName)
+        print "</ul>"
+        print "</nav>"
+        
     except KeyError:
         print """
         <div id = "header",class="header">
