@@ -12,7 +12,7 @@ print """
 <html>
 <head>
 
-        <title>Cart</title>
+        <title>Cart | The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
         <link rel="stylesheet" href="../topKittyFormat2.css" />
 </head>

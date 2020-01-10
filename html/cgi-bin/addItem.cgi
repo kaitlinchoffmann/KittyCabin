@@ -17,7 +17,7 @@ print """
 <html>
 <head>
 
-        <title>Add Item</title>
+        <title>Added Item | The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
         <link rel="stylesheet" href="../topKittyFormat2.css" />
 </head>

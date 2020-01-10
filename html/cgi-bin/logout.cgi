@@ -23,6 +23,7 @@ print "Content-type:text/html\n\n"
 print """
 <html>
 <head>
+    <title>Logout | The Kitty Cabin</title>
     <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
     <link rel="stylesheet" href="../kittyformat.css" />
     <link rel="stylesheet" href="../topKittyFormat2.css" />
@@ -48,7 +49,7 @@ print """
 </div>                      
 </form>
 <p>Register a New Account! </p> 
-<form method = "post" action="../register.htm">
+<form method = "post" action="register2.cgi">
     <p><input type="submit" value="Register" name="register"></p>
 </form>
 </CENTER>

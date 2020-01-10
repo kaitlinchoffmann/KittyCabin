@@ -84,7 +84,7 @@ except:
 
 print "<html>"
 print "<head>"
-print "<title>Cart Page</title>"
+print "<title>Review Order | The Kitty Cabin</title>"
 print "<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>"
 print "<link rel='stylesheet' href='../confirmKittyFormat.css'/>"
 print "</head>"

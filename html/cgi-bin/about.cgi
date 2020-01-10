@@ -14,7 +14,7 @@ print """
 <html>
 <head>
 
-        <title>The Kitty Cabin</title>
+        <title>About | The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
         <link rel="stylesheet" href="../topKittyFormat2.css" />
 </head>
