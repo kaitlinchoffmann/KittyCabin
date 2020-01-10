@@ -73,7 +73,7 @@ try:
     print "<nav>"
     print "<ul>"
     print "     <li><a  href='index-top-menu2.cgi'>Home</a></li>"
-    print "      <li><a href='../about.htm'>About</a></li>"
+    print "      <li><a href='about.cgi'>About</a></li>"
     print "      <li><a href='logout.cgi'>Logout</a></li>"
     print "      <li><a href='catalog.cgi'>Shop</a></li>"
     print "      <li>Hi, %s!<a href='cart.cgi'>Cart</a></li-last>"%(custName)
