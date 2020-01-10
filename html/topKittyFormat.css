@@ -44,6 +44,12 @@ ul {
   margin-bottom: 20px;
 }
 
+#greet {
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+}
+
 li {
   float: left;
 }

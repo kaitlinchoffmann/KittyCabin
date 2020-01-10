@@ -5,6 +5,13 @@
     background-color: white;
 }
 
+#viewLay {
+  margin: 100px;
+  font-size: 20px;
+  font-family: 'Merienda';
+  background-color: white;  
+}
+
 body {
   font-family: 'Merienda';
 }

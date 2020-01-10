@@ -1,6 +1,7 @@
-body {
-  margin-left: 200px;
-  margin-right: 200px;
+#regLay {
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
   font-size: 20px;
   font-family: 'Merienda';
    background-color: white; 
