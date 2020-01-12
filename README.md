@@ -21,7 +21,7 @@ In order for companies to have access to The Kitty Cabin, make sure Server.java 
 To check if The Kitty Cabin server is still running, enter top in Linux command line to see what is running. To end/kill the server background process, enter top, find the pid, and enter kill pidNumber. 
 
 Example:
-If pid is 3047, enter kill 3047 to send the process. 
+If pid is 3047, enter kill 3047 to end the process. 
 
 When sending an order to The Kitty Cabin, directions can be found after registering and logging in as a Business account. When connecting to The Kitty Cabin Server, business’s Client program should change their port to send data to 11120. To get a reply back from the server, change reply port to 11121. Client program’s answer file it is asking for should be /var/www/ebusiness/b-f19-06/html/files/ClientSocket/As.dat. The question file it is sending over to the server is /var/www/ebusiness/b-f19-06/html/files/ClientSocket/Qs.dat. 
 
