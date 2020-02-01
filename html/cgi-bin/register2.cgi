@@ -117,7 +117,7 @@ print """
 </div>
 </form></div>
 
-<div id = "I"> 
+<div id = "I" style="display: none;"> 
   <form method="post" action="register.cgi">
   <div id ="one"> 
                 Full Name:<br>
@@ -135,7 +135,7 @@ print """
   </div>
   </form></div>
 
-  <div id = "S"> 
+  <div id = "S" style="display: none;> 
   <form method="post" action="register.cgi">
   <div id ="one"> 
                 Full Name:<br>
