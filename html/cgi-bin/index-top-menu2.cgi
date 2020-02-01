@@ -16,8 +16,8 @@ print """
 
         <title>The Kitty Cabin</title>
         <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-        <link rel="stylesheet" href="../topKittyFormat2.css" />
-        <link rel="stylesheet" href="../topKittyFormat.css" />        
+        <link rel="stylesheet" href="../topKittyFormat.css" />
+        <link rel="stylesheet" href="../topKittyFormat2.css" />        
 </head>
 <body>
 """
@@ -39,7 +39,7 @@ if 'HTTP_COOKIE' in os.environ:
             print "Error: unable to fetch data."
 
         print """
-        <div id = "header",class="header">
+        <div id = "headerMain",class="header">
         <h1>The Kitty Cabin</h1>
         <br>Clothes for the Ultimate Cat Lover
         </div>
@@ -56,11 +56,11 @@ if 'HTTP_COOKIE' in os.environ:
         
     except KeyError:
         print """
-        <div id = "header",class="header">
+        <div id = "headerMain",class="header">
         <h1>The Kitty Cabin</h1>
         <br>Clothes for the Ultimate Cat Lover
         </div>
-
+        <nav>
         <ul>
           <li><a class="active" href="index-top-menu2.cgi">Home</a></li>
           <li><a href="about.cgi">About</a></li>
@@ -68,16 +68,17 @@ if 'HTTP_COOKIE' in os.environ:
           <li><a href="register2.cgi">Register</a></li>
           <li><a href="catalog.cgi">Shop</a></li>
           <li><a href="cart.cgi">Cart</a></li-last>
-        </ul>   
+        </ul>
+        </nav>   
         """    
        
 else: 
     print """
-    <div id = "header",class="header">
+    <div id = "headerMain",class="header">
     <h1>The Kitty Cabin</h1>
     <br>Clothes for the Ultimate Cat Lover
     </div>
-
+    <nav>
     <ul>
       <li><a href="index-top-menu2.cgi">Home</a></li>
       <li><a href="about.cgi">About</a></li>
@@ -86,6 +87,7 @@ else:
       <li><a href="catalog.cgi">Shop</a></li>
       <li><a href="cart.cgi">Cart</a></li-last>
     </ul>
+    </nav>
     """
 print """
 <div id = "main">

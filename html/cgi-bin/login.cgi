@@ -66,7 +66,7 @@ try:
     print "<link rel='stylesheet' href='../topKittyFormat2.css' />"
     print "</head>"
     print "<body>"
-    print "<div id = 'header',class='header'>"
+    print "<div id = 'headerMain',class='header'>"
     print "<h1>The Kitty Cabin</h1>"
     print "<br>Clothes for the Ultimate Cat Lover"
     print "</div>"
