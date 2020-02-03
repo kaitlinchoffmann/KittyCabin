@@ -45,7 +45,7 @@ if 'HTTP_COOKIE' in os.environ:
           <li><a href="index-top-menu2.cgi">Home</a></li>
           <li><a href="about.cgi">About</a></li>
           <li><a href="../login.htm">Login</a></li>
-          <li><a class="active" href="../register.htm">Register</a></li>
+          <li><a class="active" href="register2.cgi">Register</a></li>
           <li><a href="catalog.cgi">Shop</a></li>
           <li><a href="cart.cgi">Cart</a></li-last>
         </ul>    
@@ -59,7 +59,7 @@ else:
       <li><a href="index-top-menu2.cgi">Home</a></li>
       <li><a href="about.cgi">About</a></li>
       <li><a href="../login.htm">Login</a></li>
-      <li><a class="active" href="../register.htm">Register</a></li>
+      <li><a class="active" href="register2.cgi">Register</a></li>
       <li><a href="catalog.cgi">Shop</a></li>
       <li><a href="cart.cgi">Cart</a></li-last>
     </ul>
@@ -95,7 +95,7 @@ print """
 <div id="regLay">
 <input type="radio" onload="hideInd(this)" onclick="hideInd(this)" name="custType" value="Business" checked> Business 
 <input type="radio" onclick="hideBus(this)" name="custType" value="Individual"> Individual
-<input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff
+<!-- <input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff -->
 <h2> Registration </h2>
   <div id = "B">
     <form method="post" action="register.cgi">

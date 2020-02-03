@@ -131,7 +131,7 @@ if((len(cId) > 0) or (custPass != conPass) or ((custType == "Business") and (cus
     <div id="regLay">
     <input type="radio" onload="hideInd(this)" onclick="hideInd(this)" name="custType" value="Business" checked> Business 
     <input type="radio" onclick="hideBus(this)" name="custType" value="Individual"> Individual
-    <input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff
+<!--    <input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff  -->
     <h2> Registration </h2>
       <div id = "B">
         <form method="post" action="register.cgi">
@@ -152,7 +152,7 @@ if((len(cId) > 0) or (custPass != conPass) or ((custType == "Business") and (cus
                     <p><input type="submit" value="Submit"></p>
     </div>
     </form></div>
-    <div id = "I"> 
+    <div id = "I" style="display: none;"> 
       <form method="post" action="register.cgi">
       <div id ="one"> 
                     Full Name:<br>
@@ -169,7 +169,7 @@ if((len(cId) > 0) or (custPass != conPass) or ((custType == "Business") and (cus
                     <p><input type="submit" value="Submit"></p>
       </div>
       </form></div>
-      <div id = "S"> 
+      <div id = "S" style="display: none;"> 
       <form method="post" action="register.cgi">
       <div id ="one"> 
                     Full Name:<br>
