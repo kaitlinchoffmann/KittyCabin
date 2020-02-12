@@ -55,7 +55,7 @@ if 'HTTP_COOKIE' in os.environ:
         <form method='post' action='../login.htm'>
         <center><input type='submit' value='Login'>
         </form>
-        <form method='post' action='../register.htm'>
+        <form method='post' action='register2.cgi'>
         <input type='submit' value='Register'>
         </form></center>
         """    
@@ -77,7 +77,7 @@ else:
     <form method='post' action='../login.htm'>
     <center><input type='submit' value='Login'>
     </form>
-    <form method='post' action='../register.htm'>
+    <form method='post' action='register2.cgi'>
     <input type='submit' value='Register'>
     </form></center>
     """

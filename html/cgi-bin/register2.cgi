@@ -96,10 +96,10 @@ print """
 <input type="radio" onload="hideInd(this)" onclick="hideInd(this)" name="custType" value="Business" checked> Business 
 <input type="radio" onclick="hideBus(this)" name="custType" value="Individual"> Individual
 <!-- <input type="radio" onclick="hideStaf(this)" name="custType" value="Staff"> Staff -->
-<h2> Registration </h2>
+<h2><center>Registration</center></h2>
   <div id = "B">
     <form method="post" action="register.cgi">
-    <div id ="one"> 
+    <div id ="forms"> 
                 Full Name:<br>
                 <input type="hidden" name="custType" value="Business">
                 <input type="text" name="custName"><br>
@@ -119,7 +119,7 @@ print """
 
 <div id = "I" style="display: none;"> 
   <form method="post" action="register.cgi">
-  <div id ="one"> 
+  <div id ="forms"> 
                 Full Name:<br>
                 <input type="hidden" name="custType" value="Individual">
                 <input type="text" name="custName"><br>
@@ -137,7 +137,7 @@ print """
 
   <div id = "S" style="display: none;> 
   <form method="post" action="register.cgi">
-  <div id ="one"> 
+  <div id ="forms"> 
                 Full Name:<br>
                 <input type="hidden" name="custType" value="Staff">
                 <input type="text" name="custName"><br>
